@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Notes;
+use app\models\NotesDatatable;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -130,11 +131,8 @@ class SiteController extends Controller
     public function actionNotesData()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
-        $data = Notes::find()->all();
-        $result = [];
-        foreach ($data as $item) {
-            $result[] = $item->dataForDatatable();
-        }
-        return ['data' => $data];
+        $body = Yii::$app->request->post();
+        $notesDatatable = new NotesDatatable($body);
+        return $notesDatatable->returnData();
     }
 }

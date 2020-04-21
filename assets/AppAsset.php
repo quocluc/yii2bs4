@@ -27,6 +27,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         '//cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js',
+        '//cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js'
 
     ];
     public $depends = [

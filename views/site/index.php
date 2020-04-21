@@ -12,14 +12,21 @@ $this->registerJsFile(
 ?>
 <div class="site-index">
 
-    <table id="table_id" class="display">
-        <thead>
+    <table id="table_id" class="table table-hover table-striped table-bordered table-condensed">
+        <thead class="thead-dark">
         <tr>
             <th>ID</th>
             <th>Note</th>
         </tr>
+
         </thead>
         <tbody>
         </tbody>
+        <tfoot>
+        <tr>
+            <th>ID</th>
+            <th>Note</th>
+        </tr>
+        </tfoot>
     </table>
 </div>
